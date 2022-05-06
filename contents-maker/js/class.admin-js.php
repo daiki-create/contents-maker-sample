@@ -409,6 +409,7 @@ EOM;
 		var attach       = '';
 		var contents     = '';
 		var label        = '';
+		var title         = '';
 		
 		var error        = 0;
 		var scroll_point = $( 'body' ).height();
@@ -421,6 +422,7 @@ EOM;
 			attach   = form.find( 'input.attachment' );
 			contents = form.find( 'textarea.contents' );
 			label    = '新規投稿';
+			title     = form.find( 'input.title' );
 EOM;
 		
 		
@@ -468,6 +470,23 @@ EOM;
 		
 		if ( $( '.required' ).find( contents ).length ) {
 			var element = $( '.required' ).find( contents );
+			var dt_name = slice_method( element );
+			if ( element.val() === '' ) {
+				error_span( element, dt_name, '入力', true );
+				error++;
+				scroll_point = compare_method( scroll_point, element.offset().top );
+			} else {
+				error_span( element, dt_name, '', false );
+			}
+		}
+EOM;
+
+echo <<<EOM
+
+		
+		
+		if ( $( '.required' ).find( title ).length ) {
+			var element = $( '.required' ).find( title );
 			var dt_name = slice_method( element );
 			if ( element.val() === '' ) {
 				error_span( element, dt_name, '入力', true );

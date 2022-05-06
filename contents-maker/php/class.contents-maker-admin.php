@@ -154,7 +154,7 @@ EOM;
 		<dt>新規追加する新着情報<span>Add to Contents</span></dt>
 		<dd class="required">{$span_link}<textarea class="contents" name="contents" cols="40" rows="5"></textarea></dd>{$reserve}
 		<dt>サムネイル画像<span>Thumbnail image</span></dt>
-		<dd class="required"><input type="file" class="img" name="img" value="" readonly="readonly" accept="image/*"/></dd>
+		<dd><input type="file" class="img" name="img" value="" readonly="readonly" accept="image/*"/></dd>
 	</dl>
 	<p class="submit"><input type="button" id="write-button" value="新規投稿する" /><input type="hidden" name="token" value="{$this->token}" /></p>
 </form>
