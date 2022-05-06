@@ -1,0 +1,129 @@
+@charset "utf-8";
+
+
+/* -- form#contents-maker-form, form#contents-maker-edit-form -------------------------------------------------------------------------------- */
+
+form#contents-maker-form p.change-image img,
+form#contents-maker-edit-form p.change-image img {
+	max-width: 200px;
+	margin-bottom: 7px;
+}
+
+form#contents-maker-edit-form p#exist-image img {
+	max-width: 200px;
+	margin-bottom: 7px;
+}
+
+form#contents-maker-edit-form p#exist-image span#reset {
+	display: none;
+	float: right;
+	width: auto;
+	height: auto;
+	color: #ffffff;
+	line-height: 1;
+	padding: 9px 15px;
+	border-radius: 3px;
+	background: #d9534f;
+	border: 1px solid #d43f3a;
+}
+
+form#contents-maker-edit-form p#exist-image span#reset:hover {
+	cursor: pointer;
+	background: #c9302c;
+	border: 1px solid #ac2925;
+}
+
+form#contents-maker-form input.attachment,
+form#contents-maker-edit-form input.attachment {
+	height: 2em;
+	padding: 2px 2%;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	background: #fafafa;
+	max-width: 90%;
+}
+
+form#contents-maker-form input.attachment:focus,
+form#contents-maker-edit-form input.attachment:focus {
+	box-shadow: 0px 0px 5px #55ccff;
+	border: 1px solid #55ccff;
+	background: #ffffff;
+}
+
+form#contents-maker-form input.attachment+p,
+form#contents-maker-edit-form input.attachment+p {
+	margin-top: 5px;
+}
+
+form#contents-maker-form dl dd span.error-filetype,
+form#contents-maker-edit-form dl dd span.error-filetype {
+	display: block;
+	color: #ff0000;
+	margin-top: 3px;
+}
+
+
+/* -- div#information -------------------------------------------------------------------------------- */
+
+div#information div {
+	overflow: hidden;
+}
+
+div#information div p {
+	float: left;
+}
+
+div#information div p img {
+	max-width: 200px;
+}
+
+div#information div dl {
+	width: 660px;
+	float: right;
+}
+
+
+
+
+
+
+
+
+/* -- responsive ----------------------------------------------------------------------------------------------------------------------- */
+
+/* 1000pixel start */
+@media screen and ( max-width: 1000px ) {
+
+
+form#contents-maker-form p.change-image img,
+form#contents-maker-edit-form p.change-image img {
+	max-width: 40%;
+}
+
+form#contents-maker-edit-form p#exist-image img {
+	max-width: 40%;
+}
+
+
+/* -- div#information -------------------------------------------------------------------------------- */
+
+div#information div p {
+	width: 40%;
+}
+
+div#information div p img {
+	max-width: 100%;
+	width: 100%;
+}
+
+div#information div dl {
+	width: 55%;
+}
+
+
+}
+/* 1000pixel end */
+
+
+
+
