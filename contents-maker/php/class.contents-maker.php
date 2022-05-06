@@ -298,6 +298,7 @@ EOM;
 			
 			if($row['display'])
 			{
+				$date = date('Y年m月d日',  strtotime($row['date']));
 				echo <<<EOM
 
 				<div{$data_order} style='display:flex;align-items:center;border-top: 1px solid #cccccc;'>
@@ -308,7 +309,7 @@ EOM;
 					<div id="center-{$row['id']}" style='width:80%'>
 						<dl>
 							<div style='display:flex;align-items:center'>
-								<dd id="input-date-{$row['id']}" style='font-weight:bold;font-sise:larger;min-width:18%''>{$row['date']}</dd>
+								<dd id="input-date-{$row['id']}" style='font-weight:bold;font-sise:larger;min-width:18%'>{$date}</dd>
 								<dd id="input-title-{$row['id']}" style='font-weight:bold;color:white;background-color:#4169e1;border-radius:20px;padding:0 10px;max-width:65%'>{$row['title']}</dd>
 							</div>
 							<dd onclick='show_contents({$row['id']})' id="input-contents-{$row['id']}" style='margin-top:10px;cursor:pointer;
