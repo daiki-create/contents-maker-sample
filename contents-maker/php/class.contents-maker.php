@@ -301,7 +301,7 @@ EOM;
 				$date = date('Y年m月d日',  strtotime($row['date']));
 				echo <<<EOM
 
-				<div{$data_order} style='display:flex;align-items:center;border-top: 1px solid #cccccc;'>
+				<div{$data_order} style='display:flex;align-items:center;border-top:none;'>
 					{$image_html}
 					<div id="left-{$row['id']}" style='width:20%;height:180px;margin:20px'>
 						<div id="input-img-{$row['id']}"><img src="contents-maker/thumbnail/{$row['img']}" style="width:100%;height:100%; object-fit:cover"></div>
@@ -310,7 +310,7 @@ EOM;
 						<dl>
 							<div style='display:flex;align-items:center'>
 								<dd id="input-date-{$row['id']}" style='font-weight:bold;font-sise:larger;min-width:18%'>{$date}</dd>
-								<dd id="input-title-{$row['id']}" style='font-weight:bold;color:white;background-color:#4169e1;border-radius:20px;padding:0 10px;max-width:65%'>{$row['title']}</dd>
+								<dd id="input-title-{$row['id']}" style='font-weight:bold;color:white;background-color:#4169e1;border-radius:10px;padding:1px 20px;max-width:65%'>{$row['title']}</dd>
 							</div>
 							<dd onclick='show_contents({$row['id']})' id="input-contents-{$row['id']}" style='margin-top:10px;cursor:pointer;
 							display: -webkit-box;

@@ -8,7 +8,7 @@
         <div class="back_ground_color_white max_width_920 p_10">
             <div id="contents">
                 <link rel="stylesheet" href="contents-maker/css/style.css">
-                <p class="">新着情報</p>
+                <p id="large-title">What's new</p>
                 <div id="news"></div>
             </div>
         </div>

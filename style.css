@@ -9,6 +9,11 @@
     padding-bottom: 20px;
     margin-top: 50px;
 }
+#large-title{
+    font-weight: 900;
+    color: #4169e1;
+    font-size: 1.6rem;
+}
 #contents{
     border-radius: 5px;
     box-shadow: 1px 1px 1px 1px lightgray;
