@@ -389,6 +389,7 @@ div#information {
 	border: 1px solid #cccccc;
 	border-radius: 7px;
 	box-shadow: 0 0 5px rgba( 0, 0, 0, 0.2 );
+	word-break: break-all;
 }
 
 div#information div {
