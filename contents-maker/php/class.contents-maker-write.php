@@ -58,7 +58,7 @@ class Contents_Maker_Write Extends Contents_Maker {
 		$this->post_contents = str_replace( array( "\n", "\r", "\r\n" ), '', $this->post_contents );
 		
 		
-		if ( isset( $_FILES['img'] ) && $_FILES['img'] !== '' ) {
+		if ( isset( $_FILES['img'] ) && $_FILES['img']['tmp_name'] !== '' ) {
 			$filepath = pathinfo($_FILES['img']['name']);
 
 			$rand_str = rand(100000000000000, 999999999999999);
@@ -66,6 +66,9 @@ class Contents_Maker_Write Extends Contents_Maker {
 
 			//画像を保存
 			move_uploaded_file($_FILES['img']['tmp_name'], '../thumbnail/' . $this->post_img);
+		}
+		else{
+			$this->post_img = "no-image.png";
 		}
 
 		if ( file_exists( dirname( __FILE__ ) .'/../addon/attachment/post-check.php' ) ) {
