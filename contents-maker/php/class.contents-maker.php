@@ -248,7 +248,7 @@ EOM;
 		echo <<<EOM
 
 
-<div id="information">
+<div id="information" style="word-break: break-all;">
 EOM;
 		
 		
